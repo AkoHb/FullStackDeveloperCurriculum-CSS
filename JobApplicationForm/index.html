@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Job Application Form</h1>
+      <form id="user-form">
+        <label for="name">Full name</label>
+        <input
+          id="name"
+          type="text"
+          maxlength="25"
+          placeholder="Quincy Larson"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="quincy@freecodecamp.org"
+          required
+        />
+        <label for="position">Position</label>
+        <select id="position" name="position" required>
+          <option disabled selected value="1">Select a valid position</option>
+          <option value="py-dev">Python Developer</option>
+          <option value="js-dev">Developer</option>
+          <option value="designer">Designer</option>
+          <option value="data">Data Analytic</option>
+        </select>
+        <fieldset class="radio-group" name="availability">
+          <legend>Availability:</legend>
+          <div>
+            <input
+              type="radio"
+              id="fullTime"
+              name="availability"
+              value="fullTime"
+              checked
+            />
+            <label for="fullTime" class="radio">Full-Time</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="partTime"
+              name="availability"
+              value="partTime"
+            />
+            <label for="partTime" class="radio">Part-Time</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="student"
+              name="availability"
+              value="student"
+            />
+            <label for="student" class="radio">Student</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="partTime-in"
+              name="availability"
+              value="partTime2in2"
+            />
+            <label for="partTime-in" class="radio">2 in 2</label>
+          </div>
+        </fieldset>
+
+        <label for="message">Add skills</label>
+
+        <textarea
+          id="message"
+          name="skills"
+          type="text"
+          placeholder="Describe your skills (e.g., JavaScript, React, Team Management)"
+          rows="3"
+          required
+        ></textarea>
+        <button type="submit">Send data</button>
+      </form>
+    </div>
+  </body>
+</html>
